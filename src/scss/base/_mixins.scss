@@ -1,0 +1,8 @@
+@mixin firstBackGround {
+    background: url('../../img/background.png');
+}
+
+@mixin secondBackGround {
+    background: -webkit-linear-gradient(90deg,#f2e3e3,#f9f8fb,#e0d9f2);
+    background: linear-gradient(90deg,#f2e3e3,#f9f8fb,#e0d9f2);
+}

@@ -1,0 +1,67 @@
+.composition {
+    position: relative;
+    padding: 60px;
+    // @include firstBackGround;
+    background: url('../../img/background.png');
+    &__list {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        row-gap: 40px;
+    }
+    &__img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        width: 250px;
+    }
+    &__item {
+        backdrop-filter: blur(1px);
+        position: relative;
+        height: 225px;
+        width: 225px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px $main-shadow-color,
+                    -5px -5px 10px $main-shadow-color;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: all .8s;
+        &:nth-child(even) {
+            transform: translateX(50%);
+        }
+        &-show {
+            transform: translate(0);
+            opacity: 1;
+            &:nth-child(even) {
+                transform: translateX(0);
+            }
+        }
+
+        &-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: rgb(250, 250, 250);
+            box-shadow: 1px 1px 5px $main-shadow-color;
+            
+        }
+        &-smallImg {
+           height: 70%;
+           width: 70%;
+           object-fit: contain;
+        }
+        &-descr {
+            color: $main-text-color;
+            text-shadow: 1px 1px 1px rgb(131, 131, 131);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.watch {
+    display: flex;
+    justify-content: center;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+    }
+    &__item {
+        font-size: 90px;
+        line-height: 80px;
+        text-shadow: 2px 2px 2px rgb(77, 77, 77);
+        &_dots {
+            display: inline-block;
+            margin-right: 18px;
+            transform: scale(1) translateY(-5px);
+            
+        }
+    }
+}

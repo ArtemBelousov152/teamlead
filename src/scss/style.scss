@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Roboto:wght@100;400;700&display=swap');
+@import './base/variables';
+@import './base/mixins';
+@import './base/animation';
+
+@import './blocks/btn';
+@import './blocks/promo';
+@import './blocks/composition';
+@import './blocks/reviews';
+@import './blocks/secondPromo';
+@import './blocks/order';
+@import './blocks/watch';
+
+@import './blocks/media';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,77 @@
+.order {
+    padding: 60px;
+    @include secondBackGround;
+    &__title {
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 20px;
+        color: $main-text-color;
+        text-shadow: 1px 1px 1px rgb(102, 102, 102);
+    }
+    &__wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 400px auto;
+        justify-items: center;
+    }
+    &__form {
+        margin-top: 25px;
+        position: relative;
+        width: 300px;
+        &_name, &_phone {
+            position: relative;
+        }
+        label {
+            top: -25px;
+            position: absolute;
+            color: $main-text-color;
+            font-size: 16px;
+            text-shadow: 1px 1px 1px #979797;
+        }
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+            height: 40px;
+            width: 300px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 15px 4px rgba(126, 126, 126, 0.473),
+                        0 0 15px 4px rgba(0,0,0,0.06);
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__photo {
+        position: relative;
+    }
+    &__priceWrapper {
+        font-size: 30px;
+        position: absolute;
+        bottom: 30px;
+        left: -90px;
+        color: $main-text-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__oldPrice {
+        margin-top: 10px;
+        font-size: 20px;
+        text-decoration: line-through;
+    }
+    &__price {
+        animation-name: price;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    [data-helpPhone], [data-helpName] {
+        position: absolute;
+        right: 0;
+        top: -25px;
+        cursor: default;
+        color: rgb(59, 42, 124);
+        opacity: 0;
+        transition: all 1s;
+    } 
+}

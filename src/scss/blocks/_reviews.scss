@@ -1,0 +1,56 @@
+.reviews {
+    @include secondBackGround;
+    &__content {
+        padding: 80px 0 80px 0;
+        width: 500px;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__photo {
+        width: 300px;
+        margin: 0 auto;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+    }
+    &__name {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+        color: $main-text-color;
+    }
+    &__descr {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 17px;
+        color: $main-text-color;
+    }
+    &__arrow {
+        margin: 20px 8px;
+        width: 80px;
+        height: 80px;
+        fill: rgb(235, 235, 235);
+        stroke-width: .6;
+        stroke: #696969;    
+        transition: fill 0.5s ease-out;
+        cursor: pointer;
+        &-left {
+            transform: rotate(180deg);
+            position: absolute;
+            left: -23%;
+            bottom: 42%;
+        }
+        &-right {
+            position: absolute;
+            right: -23%;
+            bottom: 42%;
+        }
+        &:hover {
+            fill: #666666;
+        }
+    }
+}
